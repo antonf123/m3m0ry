@@ -1,0 +1,11 @@
+.DS_Store
+*.py[cod]
+*.py~
+*.*~
+*.iws
+*.ipr
+*.iml
+.idea/
+.settings
+.project
+.classpath

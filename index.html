@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>welcome to m3m0rY: a social concentration game</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Anton Falcon">
+<meta name="description" content="m3m0rY is a social contrentration game">
+<meta charset="utf-8">
+<meta http-equiv="cache-control" content="private">
+<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="css/m3m0ry.css"/>
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css"/>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://platform.linkedin.com/in.js">/*
+  api_key: 75d535rl9lxxf0
+  onLoad: onLinkedInLoad
+  authorize: true
+*/</script>
+<script type="text/javascript" src="js/m3m0ry.js"></script>
+<script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
+<script type="text/javascript" src="js/linkedin.js"></script>
+<script type="text/javascript" src="js/snap.svg-min.js"></script>
+<script type="text/javascript" src="js/modernizr.custom.js"></script>
+</head>
+
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MS87XL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MS87XL');</script>
+<!-- End Google Tag Manager -->
+
+<div id="pageContainer" class="lowlight">
+  <header>
+    <div id="logo"><span class="company">m3m0rY</span><span class="tagline"> :: a social concentration game</span></div>
+    <nav>
+      <span id="player-name"></span>
+      <span id="player-pic" class="tt" title="hello"></span>
+      <button id="trigger-overlay" class="hide" type="button">i</button>
+    </nav>
+  </header>
+  <div id="contentContainer" class="clearfix">
+    <section>
+      <div id="board"></div>
+    </section>
+    <aside> 
+      <div id="control">
+        <section>
+          <span class="stat-section-titles">time:</span>
+          <span id="game-time" class="game-stats"></span>
+        </section>
+        <section>
+          <span class="stat-section-titles">tries:</span>
+          <span id="game-tries" class="game-stats"></span>
+        </section>
+        <section>
+          <span class="stat-section-titles">matches:</span>
+          <span id="game-match" class="game-stats"></span>
+        </section>
+      </div>
+    </aside>
+  </div>
+  <footer>:: [ &copy; 2014 ] :: [ powered by <span class="tt" title="w/ special thanks to Dropbox, LinkedIn, snap.svg, codrops, & tooltipster.">m3m0rY</span> ] ::</footer>
+</div>
+
+<div class="overlay overlay-boxes">
+  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="101%" viewBox="0 0 1440 806" preserveAspectRatio="none">
+    <path d="m0.005959,200.364029l207.551124,0l0,204.342453l-207.551124,0l0,-204.342453z"/>
+    <path d="m0.005959,400.45401l207.551124,0l0,204.342499l-207.551124,0l0,-204.342499z"/>
+    <path d="m0.005959,600.544067l207.551124,0l0,204.342468l-207.551124,0l0,-204.342468z"/>
+    <path d="m205.752151,-0.36l207.551163,0l0,204.342437l-207.551163,0l0,-204.342437z"/>
+    <path d="m204.744629,200.364029l207.551147,0l0,204.342453l-207.551147,0l0,-204.342453z"/>
+    <path d="m204.744629,400.45401l207.551147,0l0,204.342499l-207.551147,0l0,-204.342499z"/>
+    <path d="m204.744629,600.544067l207.551147,0l0,204.342468l-207.551147,0l0,-204.342468z"/>
+    <path d="m410.416046,-0.36l207.551117,0l0,204.342437l-207.551117,0l0,-204.342437z"/>
+    <path d="m410.416046,200.364029l207.551117,0l0,204.342453l-207.551117,0l0,-204.342453z"/>
+    <path d="m410.416046,400.45401l207.551117,0l0,204.342499l-207.551117,0l0,-204.342499z"/>
+    <path d="m410.416046,600.544067l207.551117,0l0,204.342468l-207.551117,0l0,-204.342468z"/>
+    <path d="m616.087402,-0.36l207.551086,0l0,204.342437l-207.551086,0l0,-204.342437z"/>
+    <path d="m616.087402,200.364029l207.551086,0l0,204.342453l-207.551086,0l0,-204.342453z"/>
+    <path d="m616.087402,400.45401l207.551086,0l0,204.342499l-207.551086,0l0,-204.342499z"/>
+    <path d="m616.087402,600.544067l207.551086,0l0,204.342468l-207.551086,0l0,-204.342468z"/>
+    <path d="m821.748718,-0.36l207.550964,0l0,204.342437l-207.550964,0l0,-204.342437z"/>
+    <path d="m821.748718,200.364029l207.550964,0l0,204.342453l-207.550964,0l0,-204.342453z"/>
+    <path d="m821.748718,400.45401l207.550964,0l0,204.342499l-207.550964,0l0,-204.342499z"/>
+    <path d="m821.748718,600.544067l207.550964,0l0,204.342468l-207.550964,0l0,-204.342468z"/>
+    <path d="m1027.203979,-0.36l207.550903,0l0,204.342437l-207.550903,0l0,-204.342437z"/>
+    <path d="m1027.203979,200.364029l207.550903,0l0,204.342453l-207.550903,0l0,-204.342453z"/>
+    <path d="m1027.203979,400.45401l207.550903,0l0,204.342499l-207.550903,0l0,-204.342499z"/>
+    <path d="m1027.203979,600.544067l207.550903,0l0,204.342468l-207.550903,0l0,-204.342468z"/>
+    <path d="m1232.659302,-0.36l207.551147,0l0,204.342437l-207.551147,0l0,-204.342437z"/>
+    <path d="m1232.659302,200.364029l207.551147,0l0,204.342453l-207.551147,0l0,-204.342453z"/>
+    <path d="m1232.659302,400.45401l207.551147,0l0,204.342499l-207.551147,0l0,-204.342499z"/>
+    <path d="m1232.659302,600.544067l207.551147,0l0,204.342468l-207.551147,0l0,-204.342468z"/>
+    <path d="m-0.791443,-0.360001l207.551163,0l0,204.342438l-207.551163,0l0,-204.342438z"/>
+  </svg>
+  <nav>
+    <ul>
+      <li><img class="intro-logo"/></li>
+      <li></li>
+      <li><span id="repeat-message"></span></li>
+      <li></li>
+      <li><span id="flash-message"></span></li>
+      <li><span id="action-message"></span></li>
+    </ul>
+  </nav>
+  <section id="game-settings">
+    <script type="IN/Login"></script>
+  </section>
+</div>
+<script type="text/javascript" src="js/classie.js"></script>
+<script type="text/javascript" src="js/codrops.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-30467494-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30467494-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

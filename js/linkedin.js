@@ -8,7 +8,7 @@ var onLinkedInAuth = function() {
         .fields("id", "firstName", "lastName", "pictureUrl")
         .result(displayProfiles);
     IN.API.Connections("me")
-        .fields("id", "firstName", "lastName", "pictureUrl", "publicProfileUrl")
+        .fields("id", "firstName", "lastName", "pictureUrl")
         .result(removeFacelessProfiles)
         .error(displayConnectionsErrors);
 }
